@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> Data available should render energyInfo with <Link> 1`] = `
+<Link
+  className="css-s5op6a css-1xzbir7"
+  disabled={false}
+  href="https://foo.bar"
+>
+  B
+  <sub
+    className={
+      Object {
+        "data-css-1xwhrfe": "",
+      }
+    }
+  />
+</Link>
+`;
+
+exports[`<Label /> Data available should render energyInfo without <Link> 1`] = `
+<div
+  className="css-s5op6a css-1xzbir7"
+>
+  A
+  <sub
+    className={
+      Object {
+        "data-css-1xwhrfe": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<Label /> Data available should render nothing if show=false 1`] = `""`;
+
+exports[`<Label /> Data available should split the "++" 1`] = `
+<div
+  className="css-s5op6a css-11dk3ro"
+>
+  A
+  <sub
+    className={
+      Object {
+        "data-css-1xwhrfe": "",
+      }
+    }
+  >
+    ++
+  </sub>
+</div>
+`;
+
+exports[`<Label /> No data available should render nothing 1`] = `""`;
