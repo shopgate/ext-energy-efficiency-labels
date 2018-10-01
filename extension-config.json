@@ -31,7 +31,7 @@
     "energyClassProperty": {
       "type": "admin",
       "destination": "frontend",
-      "default": "Energieeffizienzklasse",
+      "default": "",
       "params": {
         "required": true,
         "type": "text",
@@ -41,7 +41,7 @@
     "energyLinkProperty": {
       "type": "admin",
       "destination": "frontend",
-      "default": "Energieeffizienzlabel",
+      "default": "",
       "params": {
         "required": false,
         "type": "text",
