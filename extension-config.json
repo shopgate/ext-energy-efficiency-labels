@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "id": "@shopgate/energy-efficiency-labels",
+  "components": [
+    {
+      "id": "EEKPdp",
+      "path": "frontend/portals/Pdp/index.jsx",
+      "target": "product.price.after",
+      "type": "portals"
+    },
+    {
+      "id": "EEKList",
+      "path": "frontend/portals/List/index.jsx",
+      "target": "product-item.price.after",
+      "type": "portals"
+    },
+    {
+      "id": "EEKFavList",
+      "path": "frontend/portals/FavList/index.jsx",
+      "target": "favorites.product-price.after",
+      "type": "portals"
+    },
+    {
+      "id": "EEKCart",
+      "path": "frontend/portals/Cart/index.jsx",
+      "target": "cart.item.price.after",
+      "type": "portals"
+    }
+  ],
+  "configuration": {
+    "energyClassProperty": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "",
+      "params": {
+        "required": true,
+        "type": "text",
+        "label": "Please provide the name of the product property where the energy class is provided"
+      }
+    },
+    "energyLinkProperty": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "",
+      "params": {
+        "required": false,
+        "type": "text",
+        "label": "Please provide the name of the product property where the link to the image is provided"
+      }
+    },
+    "showOnPdp": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": true,
+      "params": {
+        "type": "checkbox",
+        "label": "Show energy labels on product detail page"
+      }
+    },
+    "showInList": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": true,
+      "params": {
+        "type": "checkbox",
+        "label": "Show energy labels in product lists"
+      }
+    },
+    "showInCart": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": true,
+      "params": {
+        "type": "checkbox",
+        "label": "Show energy labels in cart"
+      }
+    }
+  }
+}
