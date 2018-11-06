@@ -1,0 +1,7 @@
+{
+  "energyClassProperty": "EnergyClassProperty",
+  "energyLinkProperty": "EnergyClassLink",
+  "showOnPdp": true,
+  "showInList": true,
+  "showInCart": true
+}
