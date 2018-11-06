@@ -2,7 +2,7 @@
 
 exports[`<Label /> Data available should render energyInfo with <Link> 1`] = `
 <Link
-  className="css-s5op6a css-1xzbir7"
+  className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
   disabled={false}
   href="https://foo.bar"
 >
@@ -19,7 +19,7 @@ exports[`<Label /> Data available should render energyInfo with <Link> 1`] = `
 
 exports[`<Label /> Data available should render energyInfo without <Link> 1`] = `
 <div
-  className="css-s5op6a css-1xzbir7"
+  className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
 >
   A
   <sub
@@ -36,7 +36,7 @@ exports[`<Label /> Data available should render nothing if show=false 1`] = `""`
 
 exports[`<Label /> Data available should split the "++" 1`] = `
 <div
-  className="css-s5op6a css-11dk3ro"
+  className="css-s5op6a css-11dk3ro ext-shopgate-energy-efficiency-label"
 >
   A
   <sub

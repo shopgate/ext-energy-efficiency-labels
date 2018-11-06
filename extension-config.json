@@ -25,6 +25,12 @@
       "path": "frontend/portals/Cart/index.jsx",
       "target": "cart.item.price.after",
       "type": "portals"
+    },
+    {
+      "id": "AppGlobal",
+      "path": "frontend/portals/AppGlobal/index.jsx",
+      "target": "app.globals",
+      "type": "portals"
     }
   ],
   "configuration": {
