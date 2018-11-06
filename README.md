@@ -1,7 +1,45 @@
 # Shopgate Connect - Extension energy efficiency labels
 [![GitHub license](http://dmlc.github.io/img/apache2.svg)](LICENSE.md)
-[![Build Status](https://travis-ci.org/shopgate/ext-products-add-properties.svg?branch=master)](https://travis-ci.org/shopgate/ext-magento-favorites)
-[![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-products-add-properties/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-products-add-properties?branch=master)
+[![Build Status](https://travis-ci.org/shopgate/ext-energy-efficiency-labels.svg?branch=master)](https://travis-ci.org/shopgate/ext-energy-efficiency-labels)
+[![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-energy-efficiency-labels/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-energy-efficiency-labels?branch=master)
+
+## Description
+This extension adds energy efficiency labels to a product item on product lists, cart and favorites.
+
+## How to use it
+The only requirement for this extension is to set an extension config:
+```json
+{
+  "energyClassProperty": "name-of-the-property"
+}
+```
+With this config, the extension would try to find an information about the energy efficiency of a product inside of this property.
+The property must be exported in a regular way to Shopgate.
+
+Possible values:
+```
+[
+  'A+++',
+  'A++',
+  'A+',
+  'A',
+  'B',
+  'C',
+  'D',
+  'E'
+]
+```
+
+## Additional configuration
+There is additional configuration possible:
+```json
+{
+  "energyLinkProperty": "Name of the property which would be used as a link to an image with descriptive version of the energy efficiency label",
+  "showOnPdp": "Defaults to true. When false EFL won't be shown on the product detail page.",
+  "showInList": "Defaults to true. When false, EFL won't be shown on product lists",
+  "showInCart": "Defaults to true. When false, EFL won't be shown in cart"
+}
+```
 
 ## Changelog
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Link from '@shopgate/pwa-common/components/Router/components/Link';
 import styles from './style';
@@ -17,18 +17,22 @@ const Label = ({ energyInfo, show }) => {
   const text = index >= 0 ? energyInfo.class.substr(0, index) : energyInfo.class;
   const plus = index >= 0 ? energyInfo.class.substr(index) : '';
 
-  const content = [text, <sub className={styles.sup}>{plus}</sub>];
+  const content = (
+    <Fragment>
+      {text}<sub className={styles.sup}>{plus}</sub>
+    </Fragment>
+  );
 
   if (energyInfo.link) {
     return (
-      <Link href={energyInfo.link} className={`${styles.arrow} ${styles.getColor(energyInfo.class)}`}>
+      <Link href={energyInfo.link} className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}>
         {content}
       </Link>
     );
   }
 
   return (
-    <div className={`${styles.arrow} ${styles.getColor(energyInfo.class)}`}>
+    <div className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}>
       {content}
     </div>
   );
