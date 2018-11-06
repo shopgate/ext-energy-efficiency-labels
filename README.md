@@ -17,16 +17,16 @@ With this config, the extension would try to find an information about the energ
 The property must be exported in a regular way to Shopgate.
 
 Possible values:
-```json
+```
 [
-'A+++',
-'A++',
-'A+',
-'A',
-'B',
-'C',
-'D',
-'E'
+  'A+++',
+  'A++',
+  'A+',
+  'A',
+  'B',
+  'C',
+  'D',
+  'E'
 ]
 ```
 
