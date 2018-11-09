@@ -43,13 +43,13 @@ Label.propTypes = {
     class: PropTypes.string,
     link: PropTypes.string,
   }),
-  listDisplay: PropTypes.string,
+  location: PropTypes.string,
   show: PropTypes.bool,
 };
 
 Label.defaultProps = {
   energyInfo: {},
-  listDisplay: '',
+  location: '',
   show: true,
 };
 
