@@ -9,6 +9,10 @@
 - Changelog typo
 ### Removed
 
+## [v.1.0.2] - 2018-11-09
+### Fixed
+- Modified Label component to account for location prop passed from product list view.
+
 ## [v.1.0.1] - 2018-10-23
 ### Fixed
 - Hotfixed a product list view where labels where overflowing the viewbox by putting the labels on the bottom edge of a list item.
