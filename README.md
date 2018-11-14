@@ -1,9 +1,9 @@
-# Shopgate Connect - Extension energy efficiency labels
-[![GitHub license](http://dmlc.github.io/img/apache2.svg)](LICENSE.md)
+# Shopgate Connect - Energy Efficiency Labels Extension
+
+[![GitHub license](http://dmlc.github.io/img/apache2.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/shopgate/ext-energy-efficiency-labels.svg?branch=master)](https://travis-ci.org/shopgate/ext-energy-efficiency-labels)
 [![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-energy-efficiency-labels/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-energy-efficiency-labels?branch=master)
 
-## Description
 This extension adds energy efficiency labels to a product item on product lists, cart and favorites.
 
 ## How to use it
@@ -59,6 +59,6 @@ apps and mobile websites for the iPhone, iPad, Android smartphones and tablets.
 
 ## License
 
-Shopgate Connect - Extension energy efficiency labels is available under the Apache License, Version 2.0.
+This extension is available under the Apache License, Version 2.0.
 
-See the [LICENSE](./LICENSE.md) file for more information.
+See the [LICENSE](./LICENSE) file for more information.
