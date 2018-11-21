@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "id": "@shopgate/energy-efficiency-labels",
   "components": [
     {
@@ -15,6 +15,12 @@
       "type": "portals"
     },
     {
+      "id": "EEKInsideList",
+      "path": "frontend/portals/List/index.jsx",
+      "target": "product-item-inside.price.after",
+      "type": "portals"
+    },
+    {
       "id": "EEKFavList",
       "path": "frontend/portals/FavList/index.jsx",
       "target": "favorites.product-price.after",
@@ -24,12 +30,6 @@
       "id": "EEKCart",
       "path": "frontend/portals/Cart/index.jsx",
       "target": "cart.item.price.after",
-      "type": "portals"
-    },
-    {
-      "id": "AppGlobal",
-      "path": "frontend/portals/AppGlobal/index.jsx",
-      "target": "app.globals",
       "type": "portals"
     }
   ],

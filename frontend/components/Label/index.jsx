@@ -8,8 +8,8 @@ import styles from './style';
  * @param {Object} props Props
  * @return {JSX}
  */
-const Label = ({ energyInfo, show }) => {
-  if (!show || !energyInfo.class) {
+const Label = ({ location, energyInfo, show }) => {
+  if (!show || !energyInfo.class || location === 'productList') {
     return null;
   }
 
@@ -43,11 +43,13 @@ Label.propTypes = {
     class: PropTypes.string,
     link: PropTypes.string,
   }),
+  location: PropTypes.string,
   show: PropTypes.bool,
 };
 
 Label.defaultProps = {
   energyInfo: {},
+  location: '',
   show: true,
 };
 
