@@ -16,7 +16,7 @@ The only requirement for this extension is to set an extension config:
 With this config, the extension would try to find an information about the energy efficiency of a product inside of this property.
 The property must be exported in a regular way to Shopgate.
 
-Possible values:
+Supported values of this property:
 ```
 [
   'A+++',
