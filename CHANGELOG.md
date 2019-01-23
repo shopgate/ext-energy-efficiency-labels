@@ -28,4 +28,6 @@
 First extension version.
 
 [Unreleased]: https://github.com/shopgate/ext-energy-efficiency-labels/compare/v.1.0.1...HEAD
+[v.2.0.0]: https://github.com/shopgate/ext-energy-efficiency-labels/compare/v.1.0.2...v.2.0.0
+[v.1.0.2]: https://github.com/shopgate/ext-energy-efficiency-labels/compare/v.1.0.1...v.1.0.2
 [v.1.0.1]: https://github.com/shopgate/ext-energy-efficiency-labels/compare/v.1.0.0...v.1.0.1
