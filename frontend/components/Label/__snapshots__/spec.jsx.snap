@@ -1,54 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Label /> Data available should render energyInfo with <Link> 1`] = `
-<Link
-  className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
-  disabled={false}
-  href="https://foo.bar"
->
-  B
-  <sub
-    className={
-      Object {
-        "data-css-1xwhrfe": "",
-      }
+<Label
+  energyInfo={
+    Object {
+      "class": "B",
+      "link": "https://foo.bar",
     }
-  />
-</Link>
+  }
+  location=""
+  show={true}
+>
+  <Component
+    className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
+    href="https://foo.bar"
+  >
+    <MockedLink
+      className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
+      href="https://foo.bar"
+    >
+      <div>
+        B
+        <sub
+          className={
+            Object {
+              "data-css-1xwhrfe": "",
+            }
+          }
+        />
+      </div>
+    </MockedLink>
+  </Component>
+</Label>
 `;
 
 exports[`<Label /> Data available should render energyInfo without <Link> 1`] = `
-<div
-  className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
->
-  A
-  <sub
-    className={
-      Object {
-        "data-css-1xwhrfe": "",
-      }
+<Label
+  energyInfo={
+    Object {
+      "class": "A",
     }
-  />
-</div>
+  }
+  location=""
+  show={true}
+>
+  <div
+    className="css-s5op6a css-1xzbir7 ext-shopgate-energy-efficiency-label"
+  >
+    A
+    <sub
+      className={
+        Object {
+          "data-css-1xwhrfe": "",
+        }
+      }
+    />
+  </div>
+</Label>
 `;
 
-exports[`<Label /> Data available should render nothing if show=false 1`] = `""`;
+exports[`<Label /> Data available should render nothing if show=false 1`] = `
+<Label
+  energyInfo={
+    Object {
+      "class": "B",
+      "link": "https://foo.bar",
+    }
+  }
+  location=""
+  show={false}
+/>
+`;
 
 exports[`<Label /> Data available should split the "++" 1`] = `
-<div
-  className="css-s5op6a css-11dk3ro ext-shopgate-energy-efficiency-label"
->
-  A
-  <sub
-    className={
-      Object {
-        "data-css-1xwhrfe": "",
-      }
+<Label
+  energyInfo={
+    Object {
+      "class": "A++",
     }
+  }
+  location=""
+  show={true}
+>
+  <div
+    className="css-s5op6a css-11dk3ro ext-shopgate-energy-efficiency-label"
   >
-    ++
-  </sub>
-</div>
+    A
+    <sub
+      className={
+        Object {
+          "data-css-1xwhrfe": "",
+        }
+      }
+    >
+      ++
+    </sub>
+  </div>
+</Label>
 `;
 
-exports[`<Label /> No data available should render nothing 1`] = `""`;
+exports[`<Label /> No data available should render nothing 1`] = `
+<Label
+  energyInfo={Object {}}
+  location=""
+  show={true}
+/>
+`;
