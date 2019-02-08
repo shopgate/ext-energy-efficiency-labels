@@ -1,5 +1,8 @@
 import { createSelector } from 'reselect';
-import { getProductPropertiesUnfiltered, getProductById } from '@shopgate/pwa-common-commerce/product/selectors/product';
+import {
+  getProductPropertiesUnfiltered,
+  getProduct,
+} from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getCartItemById } from '@shopgate/pwa-common-commerce/cart/selectors';
 import { ENERGY_CLASS_PROPERTY, ENERGY_LINK_PROPERTY } from '../constants';
 
@@ -29,17 +32,14 @@ const getEnergyInfo = (properties = []) => {
 };
 
 export const getEnergyInfoByProductId = createSelector(
-  (state, { productId }) => productId,
-  state => state,
-  (productId, state) => {
+  getProduct,
+  (product) => {
     const energyInfo = {};
-    const { productData } = getProductById(state, productId) || {};
-
-    if (!productData) {
+    if (!product) {
       return energyInfo;
     }
 
-    return getEnergyInfo(productData.additionalProperties);
+    return getEnergyInfo(product.additionalProperties);
   }
 );
 
