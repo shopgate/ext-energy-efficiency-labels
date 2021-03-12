@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Link from '@shopgate/pwa-common/components/Link';
 import styles from './style';
+import { getColorForLabel2021 } from '../../helpers/colorMapping';
 
 /**
  * Energy efficiency label
@@ -9,33 +10,83 @@ import styles from './style';
  * @return {JSX}
  */
 const Label = ({ location, energyInfo, show }) => {
-  if (!show || !energyInfo.class || location === 'productList') {
+  if (!show || location === 'productList') {
     return null;
   }
 
-  const index = energyInfo.class.indexOf('+');
-  const text = index >= 0 ? energyInfo.class.substr(0, index) : energyInfo.class;
-  const plus = index >= 0 ? energyInfo.class.substr(index) : '';
+  const labels = [];
 
-  const content = (
-    <Fragment>
-      {text}<sub className={styles.sup}>{plus}</sub>
-    </Fragment>
-  );
+  /*
+  * New energy classes since March 2021
+  * @see https://www.deutschland-machts-effizient.de/KAENEF/Redaktion/DE/Standardartikel/Dossier/A-label-uebersicht.html
+  */
+  if (energyInfo.class2021) {
+    const text = energyInfo.class2021;
 
-  if (energyInfo.link) {
-    return (
-      <Link href={energyInfo.link} className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}>
-        {content}
-      </Link>
+    const content = (
+      <Fragment>
+        <div>{text}</div>
+        <div className={styles.sup2021(getColorForLabel2021(energyInfo.class2021))}>A&uarr;G</div>
+      </Fragment>
     );
+
+    if (energyInfo.link2021) {
+      labels.push(
+        <Link
+          href={energyInfo.link2021}
+          className={`${styles.arrow2021} ${styles.getColor2021(energyInfo.class2021)} ext-shopgate-energy-efficiency-label`}
+        >
+          {content}
+        </Link>
+      );
+    } else {
+      labels.push(
+        <div
+          className={`${styles.arrow2021} ${styles.getColor2021(energyInfo.class2021)} ext-shopgate-energy-efficiency-label`}
+        >
+          {content}
+        </div>
+      );
+    }
   }
 
-  return (
-    <div className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}>
-      {content}
-    </div>
-  );
+  /*
+   * Old energy classes before March 2021
+   * @see https://www.deutschland-machts-effizient.de/KAENEF/Redaktion/DE/Standardartikel/Dossier/A-label-uebersicht.html
+   */
+  if (energyInfo.class) {
+    const index = energyInfo.class.indexOf('+');
+    const text = index >= 0 ? energyInfo.class.substr(0, index) : energyInfo.class;
+    const plus = index >= 0 ? energyInfo.class.substr(index) : '';
+
+    const content = (
+      <Fragment>
+        {text}
+        <sub className={styles.sup}>{plus}</sub>
+      </Fragment>
+    );
+
+    if (energyInfo.link) {
+      labels.push(
+        <Link
+          href={energyInfo.link}
+          className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}
+        >
+          {content}
+        </Link>
+      );
+    } else {
+      labels.push(
+        <div
+          className={`${styles.arrow} ${styles.getColor(energyInfo.class)} ext-shopgate-energy-efficiency-label`}
+        >
+          {content}
+        </div>
+      );
+    }
+  }
+
+  return labels;
 };
 
 Label.propTypes = {

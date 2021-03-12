@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0-rc.2",
   "id": "@shopgate/energy-efficiency-labels",
   "components": [
     {
@@ -44,6 +44,16 @@
         "label": "Please provide the name of the product property where the energy class is provided"
       }
     },
+    "energyClassProperty2021": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "",
+      "params": {
+        "required": true,
+        "type": "text",
+        "label": "Please provide the name of the product property where the new energy class (March 2021) is provided"
+      }
+    },
     "energyLinkProperty": {
       "type": "admin",
       "destination": "frontend",
@@ -52,6 +62,16 @@
         "required": false,
         "type": "text",
         "label": "Please provide the name of the product property where the link to the image is provided"
+      }
+    },
+    "energyLinkProperty2021": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "",
+      "params": {
+        "required": false,
+        "type": "text",
+        "label": "Please provide the name of the product property where the new link (March 2021) to the image is provided"
       }
     },
     "showOnPdp": {
