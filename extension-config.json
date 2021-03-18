@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0-rc.2",
+  "version": "2.1.0-rc.3",
   "id": "@shopgate/energy-efficiency-labels",
   "components": [
     {
@@ -72,6 +72,26 @@
         "required": false,
         "type": "text",
         "label": "Please provide the name of the product property where the new link (March 2021) to the image is provided"
+      }
+    },
+    "energyProductinfoLinkLabel2021": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "Produktdatenblatt",
+      "params": {
+        "required": false,
+        "type": "text",
+        "label": "Text of the productdata info link"
+      }
+    },
+    "energyProductinfoLinkProperty2021": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "",
+      "params": {
+        "required": false,
+        "type": "text",
+        "label": "Please provide the name of the product property where the link to the product info datais provided"
       }
     },
     "showOnPdp": {

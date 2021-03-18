@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from '@shopgate/pwa-common/components/Link';
 import styles from './style';
 import { getColorForLabel2021 } from '../../helpers/colorMapping';
+import { energyProductinfoLinkLabel2021 } from '../../config';
 
 /**
  * Energy efficiency label
@@ -48,6 +49,17 @@ const Label = ({ location, energyInfo, show }) => {
         </div>
       );
     }
+  }
+
+  if (energyInfo.linkProductInfo2021 && energyProductinfoLinkLabel2021) {
+    labels.push(
+      <Link
+        href={energyInfo.linkProductInfo2021}
+        className={styles.productInfoLink}
+      >
+        {energyProductinfoLinkLabel2021}
+      </Link>
+    );
   }
 
   /*

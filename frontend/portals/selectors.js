@@ -7,7 +7,7 @@ import { getCartItemById } from '@shopgate/pwa-common-commerce/cart/selectors';
 import {
   ENERGY_CLASS_PROPERTY, ENERGY_CLASS_PROPERTY_2021,
   ENERGY_LINK_PROPERTY,
-  ENERGY_LINK_PROPERTY_2021,
+  ENERGY_LINK_PROPERTY_2021, ENERGY_PRODUCTINFO_LINK_PROPERTY2021,
 } from '../constants';
 
 /**
@@ -40,6 +40,10 @@ const getEnergyInfo = (properties = []) => {
 
     if (prop.label === ENERGY_LINK_PROPERTY_2021) {
       energyInfo.link2021 = prop.value.trim();
+    }
+
+    if (prop.label === ENERGY_PRODUCTINFO_LINK_PROPERTY2021) {
+      energyInfo.linkProductInfo2021 = prop.value.trim();
     }
   });
 

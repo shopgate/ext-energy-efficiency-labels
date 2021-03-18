@@ -1,5 +1,7 @@
 import { css } from 'glamor';
 import { getColorForLabel, getColorForLabel2021 } from '../../helpers/colorMapping';
+import Link from '@shopgate/pwa-common/components/Link';
+import React from 'react';
 
 const arrow = css({
   position: 'relative',
@@ -52,6 +54,11 @@ const arrow2021 = css({
   },
 });
 
+const productInfoLink = css({
+  color: '#696969',
+  fontSize: 12,
+});
+
 const sup = css({
   top: '-.25em',
   fontSize: '75%',
@@ -63,7 +70,7 @@ const sup = css({
 const sup2021 = color => css({
   textOrientation: 'upright',
   writingMode: 'tb',
-  fontSize: 10,
+  fontSize: 9,
   background: '#f9f9f9',
   color: 'black',
   width: 15,
@@ -101,4 +108,5 @@ export default {
   getColor2021,
   sup,
   sup2021,
+  productInfoLink,
 };
