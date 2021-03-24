@@ -7,6 +7,10 @@
 ### Changed
 ### Fixed
 
+## [v.2.1.0] - 2019-01-23
+### Added
+- Support for new energy label law https://www.deutschland-machts-effizient.de/KAENEF/Redaktion/DE/Standardartikel/Dossier/A-label-uebersicht.html
+
 ### Removed
 ## [v.2.0.0] - 2019-01-23
 ### 🔥 Changed (breaking changes)

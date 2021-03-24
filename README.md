@@ -12,12 +12,13 @@ This extension adds energy efficiency labels to a product item on product lists,
 In order to make the extension know which product property keeps the data, there must be at least one configuration set:
 ```json
 {
+  "energyLinkProperty2021": "name-of-the-property-for-the-new-energy-classes",
   "energyClassProperty": "name-of-the-property"
 }
 ```
 
 ### ⚠️ Extension dependency
-This extension requires [Additional Product Properties Extension] (@shopgate/products-add-properties) to be deployed as well so the energy class property is available in `product.additionalProperties` field. 
+This extension requires [Additional Product Properties Extension] (@shopgate/products-add-properties) to be deployed as well so the energy class property is available in `product.additionalProperties` field.
 
 Example configuration of @shopgate/products-add-properties
 ```json
@@ -48,6 +49,7 @@ There is additional configuration possible:
 ```json
 {
   "energyLinkProperty": "Name of the property which would be used as a link to an image with descriptive version of the energy efficiency label",
+  "energyLinkProperty2021": "Name of the property which would be used as a link to an image with descriptive version of the energy efficiency label",
   "showOnPdp": "Defaults to true. When false EFL won't be shown on the product detail page.",
   "showInList": "Defaults to true. When false, EFL won't be shown on product lists",
   "showInCart": "Defaults to true. When false, EFL won't be shown in cart"

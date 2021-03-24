@@ -1,6 +1,8 @@
 {
   "energyClassProperty": "EnergyClassProperty",
   "energyLinkProperty": "EnergyClassLink",
+  "energyClassProperty2021": "EnergyClassPropertyNew",
+  "energyLinkProperty2021": "EnergyClassLinkNew",
   "showOnPdp": true,
   "showInList": true,
   "showInCart": true

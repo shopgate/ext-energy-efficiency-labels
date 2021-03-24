@@ -1,5 +1,7 @@
 import { css } from 'glamor';
-import getColorForClass from '../../helpers/colorMapping';
+import { getColorForLabel, getColorForLabel2021 } from '../../helpers/colorMapping';
+import Link from '@shopgate/pwa-common/components/Link';
+import React from 'react';
 
 const arrow = css({
   position: 'relative',
@@ -25,6 +27,37 @@ const arrow = css({
     right: '100%',
   },
 });
+const arrow2021 = css({
+  display: 'flex',
+  justifyContent: 'space-between',
+  position: 'relative',
+  width: 34,
+  height: 36,
+  lineHeight: '36px',
+  padding: '0 1px',
+  margin: '12px 0 0 auto',
+  fontSize: '1.25rem',
+  fontWeight: 600,
+  color: '#FFF',
+  textAlign: 'center',
+  ':before': {
+    content: ' ',
+    position: 'absolute',
+    display: 'block',
+    borderTop: '13px solid transparent',
+    borderBottom: '13px solid transparent',
+    borderRight: 'solid',
+    borderWidth: '18px',
+    borderLeft: 'none',
+    left: 'auto',
+    right: '100%',
+  },
+});
+
+const productInfoLink = css({
+  color: '#696969',
+  fontSize: 12,
+});
 
 const sup = css({
   top: '-.25em',
@@ -34,24 +67,46 @@ const sup = css({
   verticalAlign: 'baseline',
 });
 
+const sup2021 = color => css({
+  textOrientation: 'upright',
+  writingMode: 'tb',
+  fontSize: 9,
+  background: '#f9f9f9',
+  color: 'black',
+  width: 15,
+  lineHeight: '15px',
+  marginRight: -1,
+  border: `1px solid ${color}`,
+  borderLeft: 'none',
+});
+
+const colorCss = color => css({
+  backgroundColor: color,
+  ':before': {
+    borderRightColor: `${color} !important`,
+  },
+}).toString();
+
 /**
  * Returns the color styling for the given energy class
  * @param {string} energyClass Energy class
  * @return {string}
  */
-const getColor = (energyClass) => {
-  const color = getColorForClass(energyClass);
+const getColor = energyClass => colorCss(getColorForLabel(energyClass));
 
-  return css({
-    backgroundColor: color,
-    ':before': {
-      borderRightColor: color,
-    },
-  }).toString();
-};
+/**
+ * Returns the color styling for the given energy class (vMarch 2021)
+ * @param {string} energyClass Energy class
+ * @return {string}
+ */
+const getColor2021 = energyClass => colorCss(getColorForLabel2021(energyClass));
 
 export default {
   arrow,
+  arrow2021,
   getColor,
+  getColor2021,
   sup,
+  sup2021,
+  productInfoLink,
 };
