@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/energy-efficiency-labels",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "Energy efficiency labels",
   "main": "index.js",
   "license": "Apache-2.0",
@@ -34,10 +34,6 @@
     "react-hot-loader": "^4.3.12",
     "react-transform-catch-errors": "^1.0.2",
     "redbox-react": "^1.5.0"
-  },
-  "peerDependencies": {
-    "@shopgate/pwa-common": "^6.0.0",
-    "@shopgate/pwa-common-commerce": "^6.0.0"
   },
   "jest": {
     "testPathIgnorePatterns": [
